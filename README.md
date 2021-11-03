@@ -1,5 +1,9 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/HEAD)
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/HEAD/main?urlpath=voila%2Frender%2F/IexFinder_voila.ipynb)
+
+
+
 # IexFinder
 ## Interactive Symbolic Calculation of Extrem Values
 ### Zoufiné Lauer-Baré 
