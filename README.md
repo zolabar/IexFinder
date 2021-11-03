@@ -5,7 +5,7 @@
 
 
 # IexFinder
-## Interactive Symbolic Calculation of Extrem Values
+## Interactive Symbolic Calculation of Extreme Values
 ### Zoufiné Lauer-Baré ([LinkedIn](https://www.linkedin.com/in/zoufine-lauer-bare-14677a77), [OrcidID](https://orcid.org/0000-0002-7083-6909))
 
 The ```exFinder``` web application calculates the extreme values of multivariate functions: 
