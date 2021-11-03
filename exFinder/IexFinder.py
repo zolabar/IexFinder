@@ -36,7 +36,7 @@ class Xtreme():
         
         self.f = widgets.Text(
             value='x**2*(x + 1) + y**2*(x - 1)',
-            description=r'$f(x, y)$',
+            description=r'$f(x, y)=$',
             disabled=False
             )
 
