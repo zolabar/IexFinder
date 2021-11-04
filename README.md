@@ -16,6 +16,4 @@ It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```
 
 **Usage:** Enter a function in *x* and *y* in Pythonic form into the input field and click on th update button.
 
-![](Figures/exFinder_usage.PNG)
-
-
+<img src=Figures/exFinder_usage.PNG >
