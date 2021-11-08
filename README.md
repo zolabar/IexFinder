@@ -14,6 +14,6 @@ The ```exFinder``` web application calculates the extreme values of multivariate
 It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```Jupyter Notebook```, ```Plotly``` and ```Voila```.
 
 
-**Usage:** Enter a function in *x* and *y* in Pythonic form into the input field and click on th update button.
+**Usage:** Enter a function in *x* and *y* in Pythonic form into the input field and click on the update button.
 
 <img src=Figures/exFinder_usage_2.PNG >
