@@ -60,7 +60,7 @@ class Xtreme():
         lH = sym.latex(self.H(self.f))
         
         self.fig.update_layout(
-            title=r"$f(x, y) = %s\text{, }H_f=%s$ " %(lF, lH))
+            title=r"$f(x, y) = %s\text{, }H_f(x, y)=%s$ " %(lF, lH))
         
 
     def H(self, f):
@@ -144,7 +144,7 @@ class Xtreme():
                              ]
         
         self.fig.update_layout(
-                             title=r"$f(x, y) = %s\text{, }H_f=%s$ " %(sym.latex(f), sym.latex(self.H(self.f))))
+                             title=r"$f(x, y) = %s\text{, }H_f(x, y)=%s$ " %(sym.latex(f), sym.latex(self.H(self.f))))
          
 
         return points, eigenvalues, eType
