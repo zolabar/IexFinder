@@ -20,13 +20,13 @@ class statPoint:
         self.point=point
         self.eigenvalues=eigenvalues
         if (np.array(list(eigenvalues))>0).all():
-            self.eType='min'
+            self.eType='Minimum'
         elif  (np.array(list(eigenvalues))<0).all():
-            self.eType='max'
+            self.eType='Maximum'
         elif  np.array(list(eigenvalues)).prod()==0:
-            self.eType='not classifiable'        
+            self.eType='Not Classifiable'        
         else:
-            self.eType='saddle'
+            self.eType='Saddle Point'
   
 
 
@@ -110,7 +110,7 @@ class Xtreme():
         for i in list(solSet):
             if i[0].is_real and i[1].is_real:
                 solSetReal.append(i)
-            elif sym.im(i[0]).evalf(chop=True) == 0 and sym.im(i[1]).evalf(chop=True) == 0:
+            elif abs(sym.im(i[0]).evalf()) < 10**(-120) and abs(sym.im(i[1]).evalf()) < 10**(-120):
                 solSetReal.append((sym.re(i[0]).evalf(), sym.re(i[1]).evalf()))
 
         statPoints=[]
