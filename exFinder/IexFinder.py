@@ -10,7 +10,7 @@ import numpy as np
 import ipywidgets as widgets
 import pandas as pd
 import plotly.graph_objects as go
-from sympy import sqrt, sin, cos, tan, exp, log, ln
+from sympy import sqrt, sin, cos, tan, exp
 
 x, y, z = sym.symbols('x y z', real=True)
 
@@ -20,13 +20,13 @@ class statPoint:
         self.point=point
         self.eigenvalues=eigenvalues
         if (np.array(list(eigenvalues))>0).all():
-            self.eType='Minimum'
+            self.eType='min'
         elif  (np.array(list(eigenvalues))<0).all():
-            self.eType='Maximum'
+            self.eType='max'
         elif  np.array(list(eigenvalues)).prod()==0:
-            self.eType='Not Classifiable'        
+            self.eType='not classifiable'        
         else:
-            self.eType='Saddle Point'
+            self.eType='saddle'
   
 
 
@@ -55,6 +55,19 @@ class Xtreme():
         #layout = dict(width=500, height=300)
         data = [trace]
         self.fig = go.FigureWidget(data=data)#, layout=layout)  
+        
+        f_num = sym.lambdify((x,y), eval(self.f.value))
+        
+        x_ = np.linspace(-5, 5, 100) 
+        y_ = np.linspace(-5, 5, 100)
+        
+        X, Y = np.meshgrid(x_, y_)
+        
+        self.fig2 = go.FigureWidget(data=go.Surface(
+            x=x_,
+            y=y_,
+            z=f_num(X, Y),
+            colorscale='Rainbow'))
         
         lF = sym.latex(eval(self.f.value))
         lH = sym.latex(self.H(self.f))
@@ -110,7 +123,7 @@ class Xtreme():
         for i in list(solSet):
             if i[0].is_real and i[1].is_real:
                 solSetReal.append(i)
-            elif abs(sym.im(i[0]).evalf()) < 10**(-120) and abs(sym.im(i[1]).evalf()) < 10**(-120):
+            elif abs(sym.im(i[0]).evalf()) < 10**(-120)  and abs(sym.im(i[1]).evalf()) < 10**(-120):
                 solSetReal.append((sym.re(i[0]).evalf(), sym.re(i[1]).evalf()))
 
         statPoints=[]
@@ -127,21 +140,43 @@ class Xtreme():
         eigenvalues = []
         eType = []
         
+        x_array = []
+        y_array = []
+        
         for i in statPoints:
             #print(i.point, i.eigenvalues, i.eType)
              points.append('(%s, %s)' %(i.point[0], i.point[1]))
+             x_array.append(i.point[0])
+             y_array.append(i.point[1])
              #points.append('%s' % i.point)
              eigenvalues.append('%s' % i.eigenvalues)   
              eType.append('%s' % i.eType)
           
+        array = np.asfarray(x_array+y_array)
+ 
+        limit = 2*abs(array).max()
         
-
+        limit = max(limit, 3)
+        
 
         table = self.fig.data[0]
         table.cells.values = [points,
                               eigenvalues,
                               eType
                              ]
+        
+        x_ = np.linspace(-limit, limit, 100) 
+        y_ = np.linspace(-limit, limit, 100)
+        
+        X, Y = np.meshgrid(x_, y_)
+        
+ 
+        
+        f_num = sym.lambdify((x, y), eval(self.f.value))
+
+        self.fig2.data[0].x = x_
+        self.fig2.data[0].y = y_
+        self.fig2.data[0].z = f_num(X, Y)
         
         self.fig.update_layout(
                              title=r"$f(x, y) = %s\text{, }H_f(x, y)=%s$ " %(sym.latex(f), sym.latex(self.H(self.f))))
@@ -156,5 +191,5 @@ class Xtreme():
     def compute(self):
         button = widgets.Button(description="Update")
         button.on_click(self.on_button_clicked)
-        display(self.f, button, self.fig)
+        display(self.f, button, self.fig, self.fig2)
         return
