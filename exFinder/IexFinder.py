@@ -75,6 +75,12 @@ class Xtreme():
         self.fig.update_layout(
             title=r"$f(x, y) = %s\text{, }H_f(x, y)=%s$ " %(lF, lH))
         
+        self.fig2.update_layout(
+            title='Surface Plot',
+            )
+        
+        self.fig2.update_layout(template = 'plotly_dark')
+        #self.fig2.update_layout(template = 'ggplot2')
 
     def H(self, f):
         """
