@@ -20,13 +20,13 @@ class statPoint:
         self.point=point
         self.eigenvalues=eigenvalues
         if (np.array(list(eigenvalues))>0).all():
-            self.eType='min'
+            self.eType='Minimum'
         elif  (np.array(list(eigenvalues))<0).all():
-            self.eType='max'
+            self.eType='Maximum'
         elif  np.array(list(eigenvalues)).prod()==0:
-            self.eType='not classifiable'        
+            self.eType='Not Classifiable'        
         else:
-            self.eType='saddle'
+            self.eType='Saddle Point'
   
 
 
@@ -162,7 +162,7 @@ class Xtreme():
  
         limit = 2*abs(array).max()
         
-        limit = max(limit, 3)
+        limit = max(limit, 2.5)
         
 
         table = self.fig.data[0]
