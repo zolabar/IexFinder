@@ -10,7 +10,7 @@ import numpy as np
 import ipywidgets as widgets
 import pandas as pd
 import plotly.graph_objects as go
-from sympy import sqrt, sin, cos, tan, exp
+from sympy import sqrt, sin, cos, tan, exp, log, ln
 
 x, y, z = sym.symbols('x y z', real=True)
 
