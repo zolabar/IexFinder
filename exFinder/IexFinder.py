@@ -229,7 +229,7 @@ class Xtreme():
         self.colormap.observe(self.update_colorscale, names='value')
         #display(self.f, button, self.colormap, self.fig, self.fig2)
         
-        container = widgets.HBox([self.f, self.colormap
+        container = widgets.HBox([self.f, button, self.colormap,
                                   ])
         container2 = widgets.HBox([button, 
                                   ])        
@@ -243,7 +243,7 @@ class Xtreme():
 
 
         display(widgets.VBox([container, 
-                              container2,
+                              #container2,
                               container3,
                               #container4
                               ]))
