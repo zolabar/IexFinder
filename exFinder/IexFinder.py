@@ -81,6 +81,28 @@ class Xtreme():
         
         self.fig2.update_layout(template = 'plotly_dark')
         #self.fig2.update_layout(template = 'ggplot2')
+        
+        
+        
+        self.colormap = widgets.Select(
+                    options=['Rainbow', 
+                             'Hot',
+                             'Plotly3',
+                             'RdBu',
+                             'PuRd',
+                             'Purples',
+                             'Greys',
+                             'Bluered',
+                             'Thermal',
+                             'Viridis'],
+                    value='Rainbow',
+                    # rows=10,
+                    description='Colormap',
+                    disabled=False
+                )
+
+        self.exFinder(eval(self.f.value))
+
 
     def H(self, f):
         """
@@ -158,7 +180,7 @@ class Xtreme():
              eigenvalues.append('%s' % i.eigenvalues)   
              eType.append('%s' % i.eType)
           
-        array = np.asfarray(x_array+y_array)
+        array = np.asfarray(x_array+y_array)+0.0001
  
         limit = 2*abs(array).max()
         
@@ -184,6 +206,8 @@ class Xtreme():
         self.fig2.data[0].y = y_
         self.fig2.data[0].z = f_num(X, Y)
         
+        
+        
         self.fig.update_layout(
                              title=r"$f(x, y) = %s\text{, }H_f(x, y)=%s$ " %(sym.latex(f), sym.latex(self.H(self.f))))
          
@@ -194,8 +218,33 @@ class Xtreme():
         self.exFinder(eval(self.f.value))
         return 
     
+    def update_colorscale(self, change):
+        self.fig2.data[0].colorscale = self.colormap.value
+        return     
+    
     def compute(self):
         button = widgets.Button(description="Update")
-        button.on_click(self.on_button_clicked)
-        display(self.f, button, self.fig, self.fig2)
+        button.on_click(self.on_button_clicked)     
+        self.colormap.observe(self.update_colorscale, names='value')
+        #display(self.f, button, self.colormap, self.fig, self.fig2)
+        
+        container = widgets.HBox([self.f, 
+                                  ])
+        container2 = widgets.HBox([button, 
+                                  ])        
+        
+        container3 = widgets.HBox([
+                                  self.fig, 
+                                  ])        
+        container4 = widgets.HBox([self.colormap, 
+                                  self.fig2])   
+        
+
+
+        display(widgets.VBox([container, 
+                              container2,
+                              container3,
+                              container4
+                              ]))
+        
         return
