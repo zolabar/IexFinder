@@ -73,12 +73,11 @@ class Xtreme():
         lH = sym.latex(self.H(self.f))
         
         self.fig.update_layout(
-            title=r"$f(x, y) = %s\text{, }H_f(x, y)=%s$ " %(lF, lH))
-        
+            title=r"$H_f(x, y)=%s$ " %(lH))
+ 
         self.fig2.update_layout(
-            title='Surface Plot',
-            )
-        
+            title=r"$f(x, y) = %s$ " %(lF))        
+
         self.fig2.update_layout(template = 'plotly_dark')
         #self.fig2.update_layout(template = 'ggplot2')
         
@@ -209,8 +208,10 @@ class Xtreme():
         
         
         self.fig.update_layout(
-                             title=r"$f(x, y) = %s\text{, }H_f(x, y)=%s$ " %(sym.latex(f), sym.latex(self.H(self.f))))
-         
+                             title=r"$H_f(x, y)=%s$ " %(sym.latex(self.H(self.f))))
+
+        self.fig2.update_layout(
+                             title=r"$f(x, y) = %s$ " %(sym.latex(f)))         
 
         return points, eigenvalues, eType
     
