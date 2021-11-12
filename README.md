@@ -1,6 +1,6 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/HEAD) (Jupyter Lab)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/HEAD) (Click here for Jupyter Lab)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/main?urlpath=voila%2Frender%2F/IexFinder_voila.ipynb) (Voila)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/main?urlpath=voila%2Frender%2F/IexFinder_voila.ipynb) (Click here for web App rendered by Voila)
 
 
 
