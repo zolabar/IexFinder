@@ -69,6 +69,9 @@ class Xtreme():
             z=f_num(X, Y),
             colorscale='Rainbow'))
         
+        self.fig2.update_traces(contours_z=dict(show=True, usecolormap=True,
+                                   project_z=True))
+        
         lF = sym.latex(eval(self.f.value))
         lH = sym.latex(self.H(self.f))
         
@@ -93,7 +96,9 @@ class Xtreme():
                              'Greys',
                              'Bluered',
                              'Thermal',
-                             'Viridis'],
+                             'Viridis',
+                             'amp',
+                             'Sunset'],
                     value='Rainbow',
                     # rows=10,
                     description='Colormap',
