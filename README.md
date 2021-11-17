@@ -10,7 +10,7 @@
 
 <img src=Figures/fig2.svg height='500' width='500'>
 
-The ```exFinder``` web application calculates the extreme values of multivariate functions: 
+The ```exFinder``` web application calculates and visualizes the extreme values of multivariate functions: 
 <img src="https://render.githubusercontent.com/render/math?math=f:\mathbb{R}^2\to\mathbb{R}">
 
 It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```Jupyter Notebook```, ```Plotly``` and ```Voila```.
