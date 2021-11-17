@@ -18,4 +18,10 @@ It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```
 
 <img src=Figures/exFinder_usage_4.PNG >
 
-The exFinder project is listed in the [Voila Gallery](https://voila-gallery.org/).
+The exFinder project is listed in the [Voila Gallery](https://voila-gallery.org/). 
+
+Theory for finding and characterizing stationary points of multivariate functions by using the gradient and the Hessian can be found in classical textbooks of optimization, as e.g. [Alt, 2002](https://link.springer.com/book/10.1007/978-3-322-84904-5).
+
+### References
+
+[Alt, 2002] Alt W. Nichtlineare Optimierung: Eine Einführung in Theorie, Verfahren und Anwendungen. Vieweg+Teubner Verlag; 2002.
