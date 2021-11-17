@@ -20,7 +20,7 @@ It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```
 
 The exFinder project is listed in the [Voila Gallery](https://voila-gallery.org/). 
 
-Theory for finding and characterizing stationary points of multivariate functions by using the gradient and the Hessian can be found in classical textbooks of optimization, as e.g. [Alt, 2002](https://link.springer.com/book/10.1007/978-3-322-84904-5).
+Theory for finding and characterizing stationary points of multivariate functions by using the gradient and the Hessian can be found in classical textbooks of optimization, as e.g. [[Alt, 2002]](https://link.springer.com/book/10.1007/978-3-322-84904-5).
 
 ### References
 
