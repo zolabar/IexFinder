@@ -1,5 +1,6 @@
-# IexFinder: Interactive Symbolic Calculation of Extreme Values
 <img src=Figures/fig2.svg height='200' >
+
+# IexFinder: Interactive Symbolic Calculation of Extreme Values
 
 [![DOI](https://zenodo.org/badge/424138887.svg)](https://zenodo.org/badge/latestdoi/424138887)
 
