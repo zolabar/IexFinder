@@ -2,9 +2,7 @@
 
 # IexFinder: Interactive Symbolic Calculation of Extreme Values
 
-[![DOI](https://zenodo.org/badge/424138887.svg)](https://zenodo.org/badge/latestdoi/424138887)
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/HEAD) (Click here for Jupyter Lab)
+[![DOI](https://zenodo.org/badge/424138887.svg)](https://zenodo.org/badge/latestdoi/424138887) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/HEAD) (Click here for Jupyter Lab)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/main?urlpath=voila%2Frender%2F/IexFinder_voila.ipynb)  [![example badge](Figures/succeeded.svg)](https://iexfinder.herokuapp.com/)(Click these badgets for web App rendered by Voila with **Binder** or **Heroku** respectively)
 
