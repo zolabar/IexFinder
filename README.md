@@ -6,9 +6,7 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/HEAD) (Click here for Jupyter Lab)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/main?urlpath=voila%2Frender%2F/IexFinder_voila.ipynb) (Click here for web App rendered by Voila)
-
-[![example badge](badges/succeeded.svg)](http://segundotest.herokuapp.com/)(Click here for web App rendered by Heroku)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zolabar/IexFinder/main?urlpath=voila%2Frender%2F/IexFinder_voila.ipynb)  [![example badge](Figures/succeeded.svg)](http://segundotest.herokuapp.com/)(Click these badgets for web App rendered by Voila with **Binder** or **Heroku** respectively)
 
 (http://segundotest.herokuapp.com/)
 
