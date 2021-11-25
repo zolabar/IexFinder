@@ -1,1 +1,1 @@
-web: voila —-port=$PORT —-no-browser IexFinder_voila.ipynb
+web: voila —-port=$PORT —-no-browser --enable_nbextensions=True IexFinder_voila.ipynb
