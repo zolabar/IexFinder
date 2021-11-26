@@ -86,7 +86,7 @@ class Xtreme():
         
         
         
-        self.colormap = widgets.Select(
+        self.colormap = widgets.Dropdown(
                     options=['Rainbow', 
                              'Hot',
                              'Plotly3',
