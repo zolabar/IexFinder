@@ -12,7 +12,11 @@
 The ```exFinder``` web application calculates and visualizes the extreme values of multivariate functions: 
 <img src="https://render.githubusercontent.com/render/math?math=f:\mathbb{R}^2\to\mathbb{R}">
 
-It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```Jupyter Notebook```, ```Plotly``` and ```Voila```.
+It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```Jupyter Notebook```, ```Plotly``` and ```Voila```. 
+
+Mention this project as
+
+*Lauer-Bare, Z. (2021). IexFinder -  Interactive Symbolic Calculation of Extreme Values (Version v1.0.1) [Computer software].* https://doi.org/10.5281/zenodo.5707406
 
 
 **Usage:** Enter a function in *x* and *y* in Pythonic form into the input field and click on the update button.
