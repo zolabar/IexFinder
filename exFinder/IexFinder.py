@@ -268,6 +268,13 @@ class Xtreme():
         container3 = widgets.HBox([
                                   self.fig, self.fig2
                                   ])  
+ 
+        text0 = widgets.HTML(
+            value="<b>Step by step &#128512</b>",
+            #placeholder='Some HTML',
+            #description='Some HTML',
+        )        
+        
         
         html0 = widgets.HTMLMath(
                 value=r"$\begin{matrix}\frac{\partial f}{\partial x}=0\\\frac{\partial f}{\partial y}=0\end{matrix}$",
@@ -293,6 +300,8 @@ class Xtreme():
             #description='Some HTML',
         )        
 
+        container3_5 = widgets.HBox([text0])         
+
         container4 = widgets.HBox([text])         
         
         container5 = widgets.HBox([html0, text1, self.html])   
@@ -304,6 +313,7 @@ class Xtreme():
         display(widgets.VBox([container, 
                               #container2,
                               container3,
+                              container3_5,
                               container4,
                               container5,
                               container6,
