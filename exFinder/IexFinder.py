@@ -44,12 +44,14 @@ class Xtreme():
         trace = go.Table(
             header=dict(values=['<b>Stationary points</b>', 
                                 '<b>Eigenvalues and algebraic multiplicity</b>', 
-                                '<b>Type</b>'],
+                                '<b>Type</b>',
+                                 '<b>Value</b>'],
                         #line = dict(color='#7D7F80'),
                         #fill = dict(color='#a1c3d1'),
                         align = ['left'] * 5),
             cells=dict(values=[[],
                                [],
+                              [],
                               []],
                        #line = dict(color='#7D7F80'),
                        #fill = dict(color='#EDFAFF'),
@@ -161,9 +163,9 @@ class Xtreme():
         
 
         
-        system=[sym.diff(f,x),
-                sym.diff(f,y),
-               ]
+        system = [sym.diff(f, x),
+                  sym.diff(f, y),
+                 ]
 
 
         solSet=sym.nonlinsolve(system,[x,y])
@@ -189,8 +191,12 @@ class Xtreme():
         eigenvalues = []
         eType = []
         
+        values = []
+        
         x_array = []
         y_array = []
+        
+        fNum = sym.lambdify((x,y), f)
         
         for i in statPoints:
             #print(i.point, i.eigenvalues, i.eType)
@@ -200,6 +206,8 @@ class Xtreme():
              #points.append('%s' % i.point)
              eigenvalues.append('%s' % i.eigenvalues)   
              eType.append('%s' % i.eType)
+             wert = round(fNum(float(i.point[0]), float(i.point[1])), 2)
+             values.append(wert)
           
         array = np.asfarray(x_array+y_array)+0.0001
  
@@ -211,7 +219,8 @@ class Xtreme():
         table = self.fig.data[0]
         table.cells.values = [points,
                               eigenvalues,
-                              eType
+                              eType,
+                              values
                              ]
         
         x_ = np.linspace(-limit, limit, 100) 
