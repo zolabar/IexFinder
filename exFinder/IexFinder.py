@@ -80,6 +80,14 @@ class Xtreme():
         self.fig2.update_traces(contours_z=dict(show=True, usecolormap=True,
                                    project_z=True))
         
+        self.fig2.add_trace(go.Scatter3d(x=[-2/3, 0], y=[0, 0], z=[0.15, 0],
+                                   mode='markers',
+                                            marker=dict(
+                                                    size=5,
+                                                    color='black',                # set color to an array/list of desired values
+                                                    opacity=0.8
+                                                )))
+        
         lF = sym.latex(eval(self.f.value))
         lH = sym.latex(self.H(self.f))
         
@@ -168,7 +176,7 @@ class Xtreme():
                  ]
 
 
-        solSet=sym.nonlinsolve(system,[x,y])
+        solSet=sym.nonlinsolve(system, [x, y])
 
         solSetReal=[]
         for i in list(solSet):
@@ -236,6 +244,11 @@ class Xtreme():
         self.fig2.data[0].y = y_
         self.fig2.data[0].z = f_num(X, Y)
         
+        
+        
+        self.fig2.data[1].x = x_array
+        self.fig2.data[1].y = y_array
+        self.fig2.data[1].z = values        
         
         
         self.fig.update_layout(
