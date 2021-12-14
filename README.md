@@ -9,7 +9,7 @@
 
 ## Description
 
-The ```exFinder``` web application calculates and visualizes the extreme values of multivariate functions: 
+The ```exFinder``` web application calculates and visualizes interactively the extreme values of multivariate functions: 
 <img src="https://render.githubusercontent.com/render/math?math=f:\mathbb{R}^2\to\mathbb{R}">
 
 It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```Jupyter Notebook```, ```Plotly``` and ```Voila```. It has step by step features, based on  finding and characterizing stationary points by using the gradient and the Hessian, e.g. [[Alt, 2002]](https://link.springer.com/book/10.1007/978-3-322-84904-5). 
