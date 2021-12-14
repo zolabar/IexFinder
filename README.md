@@ -12,7 +12,9 @@
 The ```exFinder``` web application calculates and visualizes the extreme values of multivariate functions: 
 <img src="https://render.githubusercontent.com/render/math?math=f:\mathbb{R}^2\to\mathbb{R}">
 
-It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```Jupyter Notebook```, ```Plotly``` and ```Voila```. 
+It is based mathematically on ```SymPy``` and ```NumPy``` and graphically on ```Jupyter Notebook```, ```Plotly``` and ```Voila```. It has step by step features, based on  finding and characterizing stationary points by using the gradient and the Hessian, e.g. [[Alt, 2002]](https://link.springer.com/book/10.1007/978-3-322-84904-5). 
+
+The exFinder project is listed in the [Voila Gallery](https://voila-gallery.org/). 
 
 Mention this project as
 
@@ -21,11 +23,9 @@ Mention this project as
 
 **Usage:** Enter a function in *x* and *y* in Pythonic form into the input field and click on the update button.
 
-<img src=Figures/exFinder_usage_4.PNG >
+<img src=Figures/exFinder_usage_5.PNG >
 
-The exFinder project is listed in the [Voila Gallery](https://voila-gallery.org/). 
 
-Theory for finding and characterizing stationary points of multivariate functions by using the gradient and the Hessian can be found in classical textbooks of optimization, as e.g. [[Alt, 2002]](https://link.springer.com/book/10.1007/978-3-322-84904-5).
 
 ## References
 
